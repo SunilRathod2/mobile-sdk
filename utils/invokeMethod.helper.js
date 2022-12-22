@@ -10,17 +10,17 @@ export const InvokeMethodEventNames = {
 	walletData: "walletData",
 };
 
-export const TriggerInvokeMethodsEvent = (eventName, data) => {
+export const TriggerInvokeMethodsEvent = ( data) => {
 	try {
-		console.log(JSON.stringify({ eventName, data }));
+		console.log(JSON.stringify({ data }));
 		if (JSBridge) {
-			JSBridge.invokeMehtod(
-				JSON.stringify({ event_name: eventName, event_params: { ...data } })
+			JSBridge.getKeyPair(
+				JSON.stringify({  ...data })
 			);
 		}
 		if (JSEventMessage) {
 			JSEventMessage.postMessage(
-				JSON.stringify({ event_name: eventName, event_params: { ...data } })
+				JSON.stringify({  ...data  })
 			);
 		}
 	} catch (err) {}
