@@ -37,8 +37,8 @@ export default function Home() {
         NETWORK: "testnet",
         NAME: "Demo React POC",
         VERIFIER_NAME: "pubg-game-verifier", // will be given
-        // VERIFIER_DOMAIN: "https://demo-gari-sdk.vercel.app/", // token verifier domain will be provided by that client
-        VERIFIER_DOMAIN: "https://get-wallet-webview.vercel.app/", // token verifier domain will be provided by that client
+        VERIFIER_DOMAIN: "https://demo-gari-sdk.vercel.app/", // token verifier domain will be provided by that client
+        // VERIFIER_DOMAIN: "https://get-wallet-webview.vercel.app/", // token verifier domain will be provided by that client
         // VERIFIER_DOMAIN: "http://localhost:3000/", // token verifier domain will be provided by that client
       };
       // setToken(tokenparams);
@@ -76,6 +76,7 @@ export default function Home() {
     // get clientid from https://dashboard.web3auth.io
 
     try {
+      console.log("1 ");
       const web3auth = new Web3AuthCore({
         clientId: CLIENT_ID,
         chainConfig: {
@@ -88,6 +89,7 @@ export default function Home() {
         },
       });
 
+      console.log("2 ");
       const adapter = new OpenloginAdapter({
         adapterSettings: {
           network: NETWORK,
@@ -104,6 +106,7 @@ export default function Home() {
       });
       web3auth.configureAdapter(adapter);
       await web3auth.init();
+      console.log("3 ");
 
       const provider = await web3auth.connectTo(WALLET_ADAPTERS.OPENLOGIN, {
         loginProvider: "jwt",
