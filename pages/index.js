@@ -26,7 +26,7 @@ export default function Home() {
       let config = {
         //gariClientId: "",
         secretKey: "",
-        GARI_URL: "https://dev-gari-sdk-backend.chingari.io",
+        GARI_URL: "",
         CLIENT_ID:
           "BAGatRxirFvKTvUNeB_urIsfZsXUEh-JUcWSi432p_5pewX_0wEvYuGQBe1IjKI35lyrqTV5qDgFznmj6N7fdvY", // for pubg-india  // it can also change
         RPCTARGET: "https://api.devnet.solana.com/",
@@ -37,7 +37,8 @@ export default function Home() {
         NETWORK: "testnet",
         NAME: "Demo React POC",
         VERIFIER_NAME: "pubg-game-verifier", // will be given
-        VERIFIER_DOMAIN: "https://demo-gari-sdk.vercel.app/", // token verifier domain will be provided by that client
+        // VERIFIER_DOMAIN: "https://demo-gari-sdk.vercel.app/", // token verifier domain will be provided by that client
+        VERIFIER_DOMAIN: "http://localhost:3000/", // token verifier domain will be provided by that client
       };
       // setToken(tokenparams);
       // setConfig(config);
