@@ -38,7 +38,7 @@ export default function Home() {
         NAME: "Demo React POC",
         VERIFIER_NAME: "pubg-game-verifier", // will be given
         // VERIFIER_DOMAIN: "https://demo-gari-sdk.vercel.app/", // token verifier domain will be provided by that client
-        VERIFIER_DOMAIN: "http://localhost:3000/", // token verifier domain will be provided by that client
+        VERIFIER_DOMAIN: "https://get-wallet-webview.vercel.app/", // token verifier domain will be provided by that client
       };
       // setToken(tokenparams);
       // setConfig(config);
